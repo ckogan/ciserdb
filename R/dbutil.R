@@ -1,6 +1,6 @@
 
 #' @export
-ciserdb <- function(user = "root") {
+ciserdb <- function(user = readline("User:")) {
   DBI::dbConnect(RMySQL::MySQL(),
                  host = "ec2-18-222-8-242.us-east-2.compute.amazonaws.com",
                  user = user,
