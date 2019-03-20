@@ -153,6 +153,7 @@ weekly_hours_report <- function(con, dt_start, dt_end, write = F, filterfun = NU
   res
 }
 
+#' @export
 user_hours <- function(con, user_name) {
   tbl(con, "User") %>% filter(NAME == user_name) %>%
     inner_join(tbl(con, "Project")) %>%
@@ -168,6 +169,7 @@ recent_users <- function(con, dt_start) {
   unique(data %>% select(NAME, Title, Email, STARTDATE))
 }
 
+#' @export
 all_by_user <- function(con, user) {
   tbl(con, "User") %>% filter(NAME == user) %>%
     inner_join(tbl(con, "Project")) %>%
