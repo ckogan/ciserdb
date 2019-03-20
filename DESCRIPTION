@@ -10,3 +10,4 @@ License: What license is it under?
 Depends: dplyr, tools, RMySQL, readxl, shiny, shinyalert, getPass
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
